@@ -13,8 +13,11 @@
 
   - name: Install fail2ban
     apt: pkg=fail2ban state=installed
-
-  - name: Set up authorized_keys for the mcserver user
+    
+  - name: Install open-vm-tools
+    apt: pkg=open-vm-tools state=installed
+    
+  - name: Set up authorized_keys for meeeeselfffffff.
     authorized_key: user=luke
                     key="{{ item }}"
     with_file:
